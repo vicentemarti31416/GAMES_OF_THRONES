@@ -6,6 +6,7 @@ import 'simplebar-react/dist/simplebar.min.css';
 import { useContext } from "react";
 import HousesContext from "../../shared/HousesContext";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Casas_Details() {
 
@@ -15,6 +16,7 @@ export default function Casas_Details() {
     const [house, setHouse] = useState(null);
     let houseImage = null;
     const navigate = useNavigate();
+    const [t, i18n] = useTranslation("global");
 
     const handleBackButtonClick = () => {
         navigate(-1);
@@ -39,8 +41,8 @@ export default function Casas_Details() {
                     </div>
                     <div className="flags__personajes--details">
                         <Link className="link" to="/"><img src="/Group.png" alt="icono home" className="home__personajes__icon--details "></img></Link>
-                        <img src="/spain1.png" alt="bandera española"></img>
-                        <img src="/united-kingdom1.png" alt="bandera inglesa"></img>
+                        <img onClick={() => i18n.changeLanguage("es")} className="vector__return" src="/spain1.png" alt="bandera española"></img>
+                        <img onClick={() => i18n.changeLanguage("en")} className="vector__return" src="/united-kingdom1.png" alt="bandera inglesa"></img>
                     </div>
                 </div>
 
@@ -54,22 +56,22 @@ export default function Casas_Details() {
                     <div className="secondary__container--details">
                         <div className="secondary__container--text">
                             <div className="secondary__container--text">
-                                <h3 className="">ASENTAMIENTO</h3>
+                                <h3 className="">{t("casas-details.settlement")}</h3>
                                 {house && house.settlement && <p className="secondary--text">{house.settlement}</p>}
                             </div>
                         </div>
                         <div className="secondary__container--text">
-                            <h3 className="">REGION</h3>
+                            <h3 className="">{t("casas-details.region")}</h3>
                             {house && house.region && <p className="secondary--text">{house.region}</p>}
                         </div>
                         <div className="secondary__container--text">
-                            <h3 className="">ALIANZAS</h3>
+                            <h3 className="">{t("casas-details.alliances")}</h3>
                             {house && house.alliances && house.alliances.map((alliance, index) => (
                                 <p className="secondary--text" key={index}>{alliance}</p>
                             ))}
                         </div>
                         <div className="secondary__container--text">
-                            <h3 className="">RELIGIONES</h3>
+                            <h3 className="">{t("casas-details.religions")}</h3>
                             {house && house.religions && house.religions.map((religion, index) => (
                                 <p key={index}>{religion}</p>
                             ))}

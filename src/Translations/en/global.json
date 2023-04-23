@@ -1,0 +1,24 @@
+{
+    "inicio": {
+        "buscador": "Search...",
+        "titulo": "GAME OF THRONES",
+        "personajes": "CHARACTERS",
+        "casas": "HOUSES",
+        "cronologia": "CHRONOLOGY"
+    },
+    "personajes-details": {
+        "house": "HOUSE",
+        "parents": "PARENTS",
+        "siblings": "SIBLINGS",
+        "titles": "TITLES",
+        "alliances": "ALLIANCES",
+        "episodes": "EPISODES"
+    },
+    "casas-details": {
+        "settlement": "SETTLEMENT",
+        "region": "REGION",
+        "alliances": "ALLIANCES",
+        "religions": "RELIGIONS",
+        "foundation": "FOUNDATION"
+    }
+}

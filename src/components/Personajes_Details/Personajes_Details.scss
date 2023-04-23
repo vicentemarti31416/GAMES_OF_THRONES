@@ -25,9 +25,7 @@
         width: 50%;
         position: relative;
 
-        .vector__return {
-            cursor: pointer;
-        }
+
     }
 
 }
@@ -116,4 +114,8 @@
             font-size: 36px;
         }
     }
+}
+
+.vector__return {
+    cursor: pointer;
 }

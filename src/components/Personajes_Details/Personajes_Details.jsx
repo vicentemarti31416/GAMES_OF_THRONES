@@ -6,6 +6,7 @@ import 'simplebar-react/dist/simplebar.min.css';
 import { useContext } from "react";
 import HousesContext from "../../shared/HousesContext";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Personajes_Details() {
 
@@ -15,6 +16,7 @@ export default function Personajes_Details() {
     const [house, setHouse] = useState(null);
     let houseImage = null;
     const navigate = useNavigate();
+    const [t, i18n] = useTranslation("global");
 
     const handleBackButtonClick = () => {
         navigate(-1);
@@ -41,8 +43,8 @@ export default function Personajes_Details() {
                     </div>
                     <div className="flags__personajes--details">
                         <Link className="link" to="/"><img src="/Group.png" alt="icono home" className="home__personajes__icon--details "></img></Link>
-                        <img src="/spain1.png" alt="bandera española"></img>
-                        <img src="/united-kingdom1.png" alt="bandera inglesa"></img>
+                        <img onClick={() => i18n.changeLanguage("es")} className="vector__return" src="/spain1.png" alt="bandera española"></img>
+                        <img onClick={() => i18n.changeLanguage("en")} className="vector__return" src="/united-kingdom1.png" alt="bandera inglesa"></img>
                     </div>
                 </div>
 
@@ -53,37 +55,37 @@ export default function Personajes_Details() {
                     </div>
                     <div className="secondary__container--details">
                         <div className="secondary__container--text">
-                            <h3 className="">CASA</h3>
+                            <h3 className="">{t("personajes-details.house")}</h3>
                             {house && house.image && <div className="image__container--details">
                                 <img className="image--details" src={'http://localhost:3000' + house.image} alt="imagen del escudoS"></img>
                             </div>}
                         </div>
                         <div className="secondary__container--text">
-                            <h3 className="">ALIANZAS</h3>
+                            <h3 className="">{t("personajes-details.alliances")}</h3>
                             {personaje.alliances && personaje.alliances.map((alliance, index) => (
                                 <p className="secondary--text" key={index}>{alliance}</p>
                             ))}
                         </div>
                         <div className="secondary__container--text">
-                            <h3 className="">APARICIONES</h3>
+                            <h3 className="">{t("personajes-details.episodes")}</h3>
                             {personaje.episodes && personaje.episodes.map((episode, index) => (
                                 <p key={index}>{episode}</p>
                             ))}
                         </div>
                         <div className="secondary__container--text">
-                            <h3 className="">PADRES</h3>
+                            <h3 className="">{t("personajes-details.parents")}</h3>
                             {personaje.parents && personaje.parents.map((parent, index) => (
                                 <p key={index}>{parent}</p>
                             ))}
                         </div>
                         <div className="secondary__container--text">
-                            <h3 className="">HIJOS</h3>
+                            <h3 className="">{t("personajes-details.siblings")}</h3>
                             {personaje.siblings && personaje.siblings.map((sibling, index) => (
                                 <p key={index}>{sibling}</p>
                             ))}
                         </div>
                         <div className="secondary__container--text">
-                            <h3 className="">TITULOS</h3>
+                            <h3 className="">{t("personajes-details.titles")}</h3>
                             {personaje.titles && personaje.titles.map((title, index) => (
                                 <p key={index}>{title}</p>
                             ))}

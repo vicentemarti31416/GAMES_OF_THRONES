@@ -1,0 +1,24 @@
+{
+    "inicio": {
+        "buscador": "Buscar...",
+        "titulo": "JUEGO DE TRONOS",
+        "personajes": "PERSONAJES",
+        "casas": "CASAS",
+        "cronologia": "CRONOLOGIA"
+    },
+    "personajes-details": {
+        "house": "CASA",
+        "parents": "PADRES",
+        "siblings": "HERMANOS",
+        "titles": "TITULOS",
+        "alliances": "ALIANZAS",
+        "episodes": "EPISODIOS"
+    },
+    "casas-details": {
+        "settlement": "ASENTAMIENTO",
+        "region": "REGION",
+        "alliances": "ALIANZAS",
+        "religions": "RELIGIONES",
+        "foundation": "FUNDACION"
+    }
+}
