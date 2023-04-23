@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Game_of_Thrones';
+  src: url('./assets/fonts/Game_of_Thrones.ttf') format('truetype');
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Game_of_Thrones';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,124 @@
+.main__casas {
+    max-width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.casas__container {
+    width: 1367px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__casas__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 19px;
+    width: 100%;
+
+    .input__casas__container {
+        width: 50%;
+        position: relative; 
+
+        .input__casas__icon {
+            position: absolute; 
+            left: 0; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            pointer-events: none; 
+        }
+
+        .input__casas__bottom-border {
+            width: 100%;
+            background-color: black;
+            border: none;
+            color: white;
+            border-bottom: 1px solid white;
+            padding-left: 30px; 
+            font-size: 20px;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: white;
+            }
+        }
+    }
+
+}
+
+.flags__casas {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+
+    .home__casas__icon {
+        width: 45px;
+        height: auto;
+    }
+}
+
+.simplebar__casas__container {}
+
+.cards__casas__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .linked {
+        text-decoration: none;
+    }
+
+    .card__casas__container {
+        width: 248px;
+        height: 320px;
+        overflow: hidden;
+        margin: 1rem 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .house__name {
+            margin-top: 8px;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            text-decoration: none !important;
+        }
+    }
+
+}
+
+.casas__footer {
+    flex-shrink: 0;
+    margin: 4rem 0;
+
+    .casas__nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        width: 1367px;
+
+        .link {
+            text-decoration: none;
+            color: white;
+            font-size: 36px;
+        }
+    }
+}
